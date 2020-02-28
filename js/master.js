@@ -44,7 +44,7 @@ answer(string, literal);
 
 const title = "Noroff";
 string = "<h1>" + title + "</h1>";
-literal = ``;
+literal = `<h1>${title}+</h1>`;
 
 answer(string, literal);
 
@@ -53,7 +53,7 @@ answer(string, literal);
 
 const paragraph = "In auctor lobortis lacus. Phasellus gravida semper nisi. Fusce egestas elit eget lorem.";
 string = "<p>" + paragraph + "</p>";
-literal = ``;
+literal = `<p>${paragraph}</p>`;
 
 answer(string, literal);
 
@@ -63,7 +63,7 @@ answer(string, literal);
 const numberOfLikes = 10;
 string = "<div>Number of likes: " + numberOfLikes + "</div>";
 
-literal = ``;
+literal = `<div>Number of likes: ${numberOfLikes}</div>`;
 
 answer(string, literal);
 
@@ -75,7 +75,7 @@ const car = {
     price: "500000",
 };
 string = "<p>" + car.model + " for sale</p>";
-literal = ``;
+literal = `<p>${car.model} for sale</p>`;
 
 answer(string, literal);
 
@@ -83,7 +83,7 @@ answer(string, literal);
 // question 8
 
 string = "<p>" + car.model + " for sale for " + car.price + "</p>";
-literal = ``;
+literal = `<p> ${car.model} for sale for ${car.price}</p>`;
 
 answer(string, literal);
 
@@ -95,7 +95,7 @@ const user = {
     lastName: "Svensson"
 };
 string = "<p>Welcome back " + user.firstName + " " + user.lastName + "</p>";
-literal = ``;
+literal = `<p>Welcome back ${user.firstName} ${user.lastName}</p>`;
 
 answer(string, literal);
 
@@ -106,11 +106,13 @@ const article = {
     title: "Latest news",
     intro: "Quisque malesuada placerat nisl. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Curabitur ullamcorper ultricies nisi. Quisque malesuada placerat nisl.",
     author: "Bob Stevenson",
-}
+};
 string = "<h1>" + article.title + "</h1>\n"
     + "<div>Writtem by " + article.author + "</div>\n"
-    + "<p>" + article.intro + "</p>"
-literal = ``;
+    + "<p>" + article.intro + "</p>";
+literal = `<h1>${article.title}</h1>
+<div>Written by ${article.author}</div>
+<p>${article.intro}</p>`;
 
 answer(string, literal);
 
@@ -127,7 +129,7 @@ answer(string, literal);
 const adults = 10;
 const children = 30;
 string = "<div>Total people: " + (adults + children) + "</div>";
-literal = ``;
+literal = `<div>Total people: ${adults+children}</div>`;
 
 answer(string, literal);
 
@@ -137,7 +139,7 @@ answer(string, literal);
 const money = 3000;
 const spent = 1000;
 string = "<div>Remaining money: " + (money - spent) + "</div>";
-literal = ``;
+literal = `<div>Remaining money: ${money - spent}</div>`;
 
 answer(string, literal);
 
@@ -149,7 +151,7 @@ function getName() {
 }
 
 string = "<div>Name: " + getName() + "</div>";
-literal = `<div>Name: ${getName()}</div>`
+literal = `<div>Name: ${getName()}</div>`;
 
 answer(string, literal);
 
@@ -161,7 +163,7 @@ function getDate() {
 }
 
 string = "<div>Date: " + getDate() + "</div>";
-literal = ``;
+literal = `<div>Date: +${getDate()}</div>`;
 
 answer(string, literal);
 
@@ -191,7 +193,7 @@ function getHeight() {
 }
 
 string = "<div>Size: " + (getWidth() + getHeight()) + " meters squared</div>";
-literal = ``;
+literal = `<div>Size: ${getWidth() + getHeight()} meter squared</div>`;
 
 answer(string, literal);
 
@@ -204,7 +206,7 @@ function getPanelContent(title) {
 }
 
 string = "<div>" + getPanelContent("Welcome") + "</div>";
-literal = ``;
+literal = `<div>${getPanelContent("welcome")}</div>`;
 
 answer(string, literal);
 
